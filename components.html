@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>뷰 컴포넌트 | Cracking Vue.js</title>
+    <meta name="description" content="Javascript, ES6, Advanced Vue.js">
+    
+    
+    <link rel="preload" href="/learning-note/assets/css/0.styles.12f91ebe.css" as="style"><link rel="preload" href="/learning-note/assets/js/app.8fa10bb2.js" as="script"><link rel="preload" href="/learning-note/assets/js/2.752a75e7.js" as="script"><link rel="preload" href="/learning-note/assets/js/10.b609ca5a.js" as="script"><link rel="prefetch" href="/learning-note/assets/js/11.f46e2932.js"><link rel="prefetch" href="/learning-note/assets/js/12.9cb1aa63.js"><link rel="prefetch" href="/learning-note/assets/js/13.16db808e.js"><link rel="prefetch" href="/learning-note/assets/js/14.959e7fba.js"><link rel="prefetch" href="/learning-note/assets/js/3.c318f124.js"><link rel="prefetch" href="/learning-note/assets/js/4.7eb02300.js"><link rel="prefetch" href="/learning-note/assets/js/5.123d6ceb.js"><link rel="prefetch" href="/learning-note/assets/js/6.fe9fd906.js"><link rel="prefetch" href="/learning-note/assets/js/7.2c9f58cc.js"><link rel="prefetch" href="/learning-note/assets/js/8.ce2ec317.js"><link rel="prefetch" href="/learning-note/assets/js/9.bf5019b5.js">
+    <link rel="stylesheet" href="/learning-note/assets/css/0.styles.12f91ebe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learning-note/" class="home-link router-link-active"><!----> <span class="site-name">Cracking Vue.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Week 1</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/vuepress.html" class="sidebar-link">VuePress</a></li><li><a href="/learning-note/instance.html" class="sidebar-link">인스턴스</a></li><li><a href="/learning-note/components.html" class="active sidebar-link">뷰 컴포넌트</a></li><li><a href="/learning-note/props.html" class="sidebar-link">Props 속성</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0703.html" class="sidebar-link">2주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 3</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0710.html" class="sidebar-link">3주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 4</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0717.html" class="sidebar-link">4주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 5</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0724.html" class="sidebar-link">5주차 수업 내용</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="뷰-컴포넌트"><a href="#뷰-컴포넌트" aria-hidden="true" class="header-anchor">#</a> 뷰 컴포넌트</h1> <ul><li><p>뷰 인스턴스</p> <ul><li>생성자 함수<div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li>인스턴스를 사용하는 이유
+<ul><li>생성자를 통해 생성한 객체에 여러 인스턴스를 활용하여 화면 단위 구성 가능</li></ul></li></ul></li> <li><p>뷰 컴포넌트</p> <ul><li>컴포넌트를 사용하는 이유
+<ul><li>데이터의 흐름을 알 수 없는 기존의 MVC 패턴에서 탈피</li> <li>항상 상단에서 아래의 방향으로 흐르는 데이터의 흐름을 구성</li> <li>이를 위하여 컴포넌트 단위로 화면을 구성하고 데이터의 흐름을 구성</li></ul></li> <li>컴포넌트 기본 문법<div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'my‐component'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>전역 컴포넌트<div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'app-content'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    template<span class="token punctuation">:</span><span class="token string">'&lt;div&gt;content&lt;/div&gt;'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>지역 컴포넌트<div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token punctuation">:</span><span class="token string">'#app'</span>
+    <span class="token punctuation">,</span>data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        str<span class="token punctuation">:</span><span class="token string">'App Header'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">,</span>components<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'app-header'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+            template<span class="token punctuation">:</span><span class="token string">'&lt;h1&gt;temp&lt;/h1&gt;'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li> <li><p>뷰 컴포넌트 통신 방법</p> <ul><li>컴포넌트 통신 규칙이 있는 이유?
+<ul><li>데이터의 흐름에 일관성을 갖게 하여 흐름 파악이 용이</li> <li>기존의 MVC 방식에서 탈피</li></ul></li> <li>props 속성
+<ul><li>모든 컴포넌트는 각각의 유효 범위를 가지고 있음</li> <li>서로 다른 컴포넌트의 데이터를 참조할 수 없음</li> <li>상단에서 하단으로 데이터의 흐름을 위하여 props 속성을 사용하여 데이터를 전달</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token punctuation">:</span><span class="token string">'#app'</span>
+    <span class="token punctuation">,</span>data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        str<span class="token punctuation">:</span><span class="token string">'App Header'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">,</span>components<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'app-header'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+            props<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'propsdata'</span><span class="token punctuation">]</span>
+            <span class="token punctuation">,</span>template<span class="token punctuation">:</span><span class="token string">'&lt;h1&gt;temp&lt;/h1&gt;'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>evnet emit (차주 학습 예정)</li></ul></li> <li><p>Axios (차주 학습 예정)</p> <ul><li>HTTP 통신 라이브러리</li> <li>웹 서비스 구조도</li> <li>Axios 장단점</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/learning-note/instance.html" class="prev">
+          인스턴스
+        </a></span> <span class="next"><a href="/learning-note/props.html">
+          Props 속성
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learning-note/assets/js/app.8fa10bb2.js" defer></script><script src="/learning-note/assets/js/2.752a75e7.js" defer></script><script src="/learning-note/assets/js/10.b609ca5a.js" defer></script>
+  </body>
+</html>

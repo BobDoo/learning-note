@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2주차 수업 내용 | Cracking Vue.js</title>
+    <meta name="description" content="Javascript, ES6, Advanced Vue.js">
+    
+    
+    <link rel="preload" href="/learning-note/assets/css/0.styles.12f91ebe.css" as="style"><link rel="preload" href="/learning-note/assets/js/app.8fa10bb2.js" as="script"><link rel="preload" href="/learning-note/assets/js/2.752a75e7.js" as="script"><link rel="preload" href="/learning-note/assets/js/5.123d6ceb.js" as="script"><link rel="prefetch" href="/learning-note/assets/js/10.b609ca5a.js"><link rel="prefetch" href="/learning-note/assets/js/11.f46e2932.js"><link rel="prefetch" href="/learning-note/assets/js/12.9cb1aa63.js"><link rel="prefetch" href="/learning-note/assets/js/13.16db808e.js"><link rel="prefetch" href="/learning-note/assets/js/14.959e7fba.js"><link rel="prefetch" href="/learning-note/assets/js/3.c318f124.js"><link rel="prefetch" href="/learning-note/assets/js/4.7eb02300.js"><link rel="prefetch" href="/learning-note/assets/js/6.fe9fd906.js"><link rel="prefetch" href="/learning-note/assets/js/7.2c9f58cc.js"><link rel="prefetch" href="/learning-note/assets/js/8.ce2ec317.js"><link rel="prefetch" href="/learning-note/assets/js/9.bf5019b5.js">
+    <link rel="stylesheet" href="/learning-note/assets/css/0.styles.12f91ebe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learning-note/" class="home-link router-link-active"><!----> <span class="site-name">Cracking Vue.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 1</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/vuepress.html" class="sidebar-link">VuePress</a></li><li><a href="/learning-note/instance.html" class="sidebar-link">인스턴스</a></li><li><a href="/learning-note/components.html" class="sidebar-link">뷰 컴포넌트</a></li><li><a href="/learning-note/props.html" class="sidebar-link">Props 속성</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Week 2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0703.html" class="active sidebar-link">2주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 3</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0710.html" class="sidebar-link">3주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 4</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0717.html" class="sidebar-link">4주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 5</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0724.html" class="sidebar-link">5주차 수업 내용</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2주차-수업-내용"><a href="#_2주차-수업-내용" aria-hidden="true" class="header-anchor">#</a> 2주차 수업 내용</h1> <ul><li><p>싱글 파일 컴포넌트</p> <ul><li>HTML, CSS, JS 코드를 한 파일에서 관리할 수 있음.</li> <li>vue cli 를 이용하여 프로젝트를 생성하면 App.vue 파일을 확인하여 파일 구조 확인 가능</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- html 소스 영역 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token comment">// 자바스크립트 영역</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token comment">/* CSS 영역 */</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>뷰 로더에 의해 html과 css를 자바스크립트 형식으로 파싱하여 html에 표현</li></ul></li> <li><p>npm</p> <ul><li>npm이란 전 세계 자바스크립트 라이브러리가 있는 공간</li> <li>npm 설정 파일 생성은</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> init
+</code></pre></div><ul><li>npm 라이브러리 다운로드</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> 라이브러리이름
+</code></pre></div></li> <li><p>ToDo Application 제작</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/learning-note/props.html" class="prev">
+          Props 속성
+        </a></span> <span class="next"><a href="/learning-note/0710.html">
+          3주차 수업 내용
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learning-note/assets/js/app.8fa10bb2.js" defer></script><script src="/learning-note/assets/js/2.752a75e7.js" defer></script><script src="/learning-note/assets/js/5.123d6ceb.js" defer></script>
+  </body>
+</html>

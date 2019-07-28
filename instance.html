@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>인스턴스 | Cracking Vue.js</title>
+    <meta name="description" content="Javascript, ES6, Advanced Vue.js">
+    
+    
+    <link rel="preload" href="/learning-note/assets/css/0.styles.12f91ebe.css" as="style"><link rel="preload" href="/learning-note/assets/js/app.8fa10bb2.js" as="script"><link rel="preload" href="/learning-note/assets/js/2.752a75e7.js" as="script"><link rel="preload" href="/learning-note/assets/js/11.f46e2932.js" as="script"><link rel="prefetch" href="/learning-note/assets/js/10.b609ca5a.js"><link rel="prefetch" href="/learning-note/assets/js/12.9cb1aa63.js"><link rel="prefetch" href="/learning-note/assets/js/13.16db808e.js"><link rel="prefetch" href="/learning-note/assets/js/14.959e7fba.js"><link rel="prefetch" href="/learning-note/assets/js/3.c318f124.js"><link rel="prefetch" href="/learning-note/assets/js/4.7eb02300.js"><link rel="prefetch" href="/learning-note/assets/js/5.123d6ceb.js"><link rel="prefetch" href="/learning-note/assets/js/6.fe9fd906.js"><link rel="prefetch" href="/learning-note/assets/js/7.2c9f58cc.js"><link rel="prefetch" href="/learning-note/assets/js/8.ce2ec317.js"><link rel="prefetch" href="/learning-note/assets/js/9.bf5019b5.js">
+    <link rel="stylesheet" href="/learning-note/assets/css/0.styles.12f91ebe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learning-note/" class="home-link router-link-active"><!----> <span class="site-name">Cracking Vue.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Week 1</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/vuepress.html" class="sidebar-link">VuePress</a></li><li><a href="/learning-note/instance.html" class="active sidebar-link">인스턴스</a></li><li><a href="/learning-note/components.html" class="sidebar-link">뷰 컴포넌트</a></li><li><a href="/learning-note/props.html" class="sidebar-link">Props 속성</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0703.html" class="sidebar-link">2주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 3</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0710.html" class="sidebar-link">3주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 4</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0717.html" class="sidebar-link">4주차 수업 내용</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Week 5</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learning-note/0724.html" class="sidebar-link">5주차 수업 내용</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="인스턴스"><a href="#인스턴스" aria-hidden="true" class="header-anchor">#</a> 인스턴스</h1> <p>인스턴스란...</p> <p>자바스크립트에서의 인스턴스 제어</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> div<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> obj<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'str'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">get</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'접근'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">,</span><span class="token function-variable function">set</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'할당'</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        div<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span>a<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>Vue 를 이용한 인스턴스 제어</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> vm<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token punctuation">:</span><span class="token string">'#app'</span>
+    <span class="token punctuation">,</span>data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        message<span class="token punctuation">:</span><span class="token string">'HELLO VUE!!!'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">,</span>methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token function-variable function">showAlert</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/learning-note/vuepress.html" class="prev">
+          VuePress
+        </a></span> <span class="next"><a href="/learning-note/components.html">
+          뷰 컴포넌트
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learning-note/assets/js/app.8fa10bb2.js" defer></script><script src="/learning-note/assets/js/2.752a75e7.js" defer></script><script src="/learning-note/assets/js/11.f46e2932.js" defer></script>
+  </body>
+</html>
